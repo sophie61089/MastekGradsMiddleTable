@@ -13,13 +13,14 @@ public class Train {
 	int totalCarriageNo;
 	int driver;
 	String provider;
+	int price;
 	
 	@Override
 	public String toString() {
 		return "Train [trainNo=" + trainNo + ", origin=" + origin + ", destination=" + destination
-				+ ", totalCarriageNo=" + totalCarriageNo + ", driver=" + driver + ", provider=" + provider + "]";
+				+ ", totalCarriageNo=" + totalCarriageNo + ", driver=" + driver + ", provider=" + provider + ", price="
+				+ price + "]";
 	}
-	
 	public int getTrainNo() {
 		return trainNo;
 	}
@@ -46,6 +47,12 @@ public class Train {
 	}
 	public int getDriver() {
 		return driver;
+	}
+	public int getPrice() {
+		return price;
+	}
+	public void setPrice(int price) {
+		this.price = price;
 	}
 	public void setDriver(int driver) {
 		this.driver = driver;
