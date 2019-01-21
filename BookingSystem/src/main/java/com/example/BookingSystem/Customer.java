@@ -5,12 +5,17 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.ws.rs.FormParam;
+import javax.xml.bind.annotation.XmlRootElement;
 
 @Entity
 @Table(name="GROUP_Customer")
+@XmlRootElement
 public class Customer {
 	
 	int customerId;
+	
+	@FormParam("customerName")
 	String customerName;
 	
 	@Id
