@@ -9,7 +9,8 @@ import javax.persistence.Table;
 public class Flight {
 	
 	int flightNo;
-	String flightDate;
+	String departureDate;
+	String arrivalDate;
 	String flightOrigin;
 	String flightDestination;
 	String airline;
@@ -20,11 +21,17 @@ public class Flight {
 	public void setFlightNo(int flightNo) {
 		this.flightNo = flightNo;
 	}
-	public String getFlightDate() {
-		return flightDate;
+	public String getDepartureDate() {
+		return departureDate;
 	}
-	public void setFlightDate(String flightDate) {
-		this.flightDate = flightDate;
+	public void setDepartureDate(String departureDate) {
+		this.departureDate = departureDate;
+	}
+	public String getArrivalDate() {
+		return arrivalDate;
+	}
+	public void setArrivalDate(String arrivalDate) {
+		this.arrivalDate = arrivalDate;
 	}
 	public String getFlightOrigin() {
 		return flightOrigin;
@@ -52,12 +59,11 @@ public class Flight {
 	}
 	@Override
 	public String toString() {
-		return "Flight [flightNo=" + flightNo + ", flightDate=" + flightDate + ", flightOrigin=" + flightOrigin
-				+ ", flightDestination=" + flightDestination + ", airline=" + airline + ", flightPrice=" + flightPrice
-				+ "]";
+		return "Flight [flightNo=" + flightNo + ", departureDate=" + departureDate + ", arrivalDate=" + arrivalDate
+				+ ", flightOrigin=" + flightOrigin + ", flightDestination=" + flightDestination + ", airline=" + airline
+				+ ", flightPrice=" + flightPrice + "]";
 	}
 	
 	
-	 
-
 }
+
