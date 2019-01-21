@@ -13,7 +13,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 public class Account {
 	
-	int accountId;
+	int accountId ;
 	
 	@FormParam("type")
 	String accountType;
