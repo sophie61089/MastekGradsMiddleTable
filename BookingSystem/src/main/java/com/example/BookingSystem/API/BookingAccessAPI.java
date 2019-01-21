@@ -1,4 +1,4 @@
-package com.example.BookingSystem;
+package com.example.BookingSystem.API;
 
 import javax.ws.rs.BeanParam;
 import javax.ws.rs.Consumes;
@@ -11,34 +11,42 @@ import javax.ws.rs.core.MediaType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-@Component
-@Path("/trains/")
-public class TrainAccessAPI {
- 
-	TrainJPARepository repository;
+import com.example.BookingSystem.Entities.Booking;
+import com.example.BookingSystem.JPA.BookingRepository;
 
-	public TrainJPARepository getRepository() {
+@Component
+@Path("/booking/")
+public class BookingAccessAPI {
+	
+	BookingRepository repository;
+
+	public BookingRepository getRepository() {
 		return repository;
 	}
 
 	@Autowired
-	public void setRepository(TrainJPARepository repository) {
+	public void setRepository(BookingRepository repository) {
 		this.repository = repository;
 	}
 	
 	@Path("/list")
 	@GET
-	@Produces({MediaType.APPLICATION_JSON,MediaType.APPLICATION_XML})//JSON will be default format when fetching data, if not JSON will give XML
-	public Iterable<Train> listTrains(){
+	@Produces({MediaType.APPLICATION_JSON,MediaType.APPLICATION_XML})
+	public Iterable<Booking> listBookings(){
 		return getRepository().findAll();
+		
 	}
 	
 	@POST
 	@Path("/register")
 	@Produces({MediaType.APPLICATION_JSON,MediaType.APPLICATION_XML})
 	@Consumes({MediaType.APPLICATION_FORM_URLENCODED})
-	public Train addTrain(@BeanParam Train newTrain) {
-		getRepository().save(newTrain);
-		return newTrain;
+	public Booking addBooking(@BeanParam Booking newBooking) {
+		getRepository().save(newBooking);
+		return newBooking;
+		
 	}
+
+	
+		
 }
