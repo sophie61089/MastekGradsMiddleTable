@@ -14,7 +14,6 @@ public class Train {
 	int driver;
 	String provider;
 	
-	
 	@Override
 	public String toString() {
 		return "Train [trainNo=" + trainNo + ", origin=" + origin + ", destination=" + destination
