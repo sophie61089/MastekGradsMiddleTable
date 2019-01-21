@@ -6,9 +6,11 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.ws.rs.FormParam;
+import javax.xml.bind.annotation.XmlRootElement;
 
 @Entity
 @Table(name="GROUP_Account")
+@XmlRootElement
 public class Account {
 	
 	int accountId;
