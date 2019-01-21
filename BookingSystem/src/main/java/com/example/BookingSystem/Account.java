@@ -5,12 +5,15 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.ws.rs.FormParam;
 
 @Entity
 @Table(name="GROUP_Account")
 public class Account {
 	
 	int accountId;
+	
+	@FormParam("type")
 	String accountType;
 	
 	@Id
