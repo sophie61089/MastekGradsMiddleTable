@@ -1,6 +1,9 @@
 package com.example.BookingSystem;
 
+import javax.ws.rs.BeanParam;
+import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
+import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
@@ -28,4 +31,12 @@ public class TrainAccessAPI {
 		return getRepository().findAll();
 	}
 	
+	@POST
+	@Path("/register")
+	@Produces({MediaType.APPLICATION_JSON,MediaType.APPLICATION_XML})
+	@Consumes({MediaType.APPLICATION_FORM_URLENCODED})
+	public Train addTrain(@BeanParam Train newTrain) {
+		getRepository().save(newTrain);
+		return newTrain;
+	}
 }
