@@ -37,9 +37,9 @@ public class AccountAccessAPI {
 	@Path("/register")
 	@Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
 	@Consumes({MediaType.APPLICATION_FORM_URLENCODED})
-	public Account addAccount(@BeanParam Account newProduct) {
-		getRepository().save(newProduct);
-		return newProduct;
+	public Account addAccount(@BeanParam Account newAccount) {
+		getRepository().save(newAccount);
+		return newAccount ;
 	}
 
 }
