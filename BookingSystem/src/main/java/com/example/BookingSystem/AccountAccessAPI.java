@@ -15,7 +15,7 @@ import org.springframework.stereotype.Component;
 @Path("/account/")
 public class AccountAccessAPI {
 	
-	AccountJPARepository repository;
+	AccountJPARepository repository ;
 
 	public AccountJPARepository getRepository() {
 		return repository;
