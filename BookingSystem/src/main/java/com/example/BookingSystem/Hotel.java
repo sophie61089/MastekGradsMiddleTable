@@ -1,5 +1,13 @@
 package com.example.BookingSystem;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="GROUP_HOTEL")
 public class Hotel {
 	
 	int hotelId;
@@ -7,6 +15,8 @@ public class Hotel {
 	String hotelLocation;
 	double nightlyCost;
 	
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	public int getHotelId() {
 		return hotelId;
 	}
