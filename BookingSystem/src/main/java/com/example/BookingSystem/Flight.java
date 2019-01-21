@@ -5,6 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.ws.rs.FormParam;
 import javax.xml.bind.annotation.XmlRootElement;
 
 @Entity
@@ -14,11 +15,17 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class Flight {
 	
 	int flightNo;
+	@FormParam("departureDate")
 	String departureDate;
+	@FormParam("arrivalDate")
 	String arrivalDate;
+	@FormParam("flightOrigin")
 	String flightOrigin;
+	@FormParam("flightDestination")
 	String flightDestination;
+	@FormParam("airline")
 	String airline;
+	@FormParam("flightPrice")
 	double flightPrice;
 	
 	@Id
