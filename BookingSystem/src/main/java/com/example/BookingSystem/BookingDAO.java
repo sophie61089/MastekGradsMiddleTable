@@ -26,7 +26,7 @@ public class BookingDAO  implements DataAccessObject<Booking>{
 		Session session= getSessionFactory().openSession();
 		session.beginTransaction();
 		session.persist(newEntity); // INSERT the object in DB
-		session.getTransaction().commit();//123
+		session.getTransaction().commit();
 		session.close();
 		return newEntity;
 	}
