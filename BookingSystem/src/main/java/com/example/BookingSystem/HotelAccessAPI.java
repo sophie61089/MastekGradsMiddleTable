@@ -23,7 +23,7 @@ public class HotelAccessAPI {
 
 	@Autowired
 	public void setHotelRepo(HotelJPARepository hotelRepo) {
-		this.hotelRepository = hotelRepository;
+		this.hotelRepository = hotelRepo;
 	}
 	
 	@Path("/list")
