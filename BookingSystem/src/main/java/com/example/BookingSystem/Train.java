@@ -20,7 +20,6 @@ public class Train {
 				+ ", totalCarriageNo=" + totalCarriageNo + ", driver=" + driver + ", provider=" + provider + "]";
 	}
 	
-	
 	public int getTrainNo() {
 		return trainNo;
 	}
