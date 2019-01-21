@@ -34,7 +34,7 @@ public class CustomerDAO implements DataAccessObject<Customer>{
 		Session session = getSessionFactory().openSession();
 		session.beginTransaction();
 		
-		// generic fetch for Object
+		// generic fetch for Object.
 		Customer e = (Customer) session.get(Customer.class, key);
 		session.getTransaction().commit();
 		session.close();
