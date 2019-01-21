@@ -1,4 +1,4 @@
-package com.example.BookingSystem;
+package com.example.BookingSystem.API;
 
 import javax.ws.rs.BeanParam;
 import javax.ws.rs.Consumes;
@@ -10,6 +10,9 @@ import javax.ws.rs.core.MediaType;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+
+import com.example.BookingSystem.Entities.Hotel;
+import com.example.BookingSystem.JPA.HotelJPARepository;
 
 @Component
 @Path("/hotels/")

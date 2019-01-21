@@ -1,10 +1,13 @@
-package com.example.BookingSystem;
+package com.example.BookingSystem.DAO;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+
+import com.example.BookingSystem.DataAccessObject;
+import com.example.BookingSystem.Entities.Train;
 
 public class TrainDAO implements DataAccessObject<Train> {
 	

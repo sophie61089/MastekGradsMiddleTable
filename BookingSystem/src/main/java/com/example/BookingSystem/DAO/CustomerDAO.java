@@ -1,4 +1,4 @@
-package com.example.BookingSystem;
+package com.example.BookingSystem.DAO;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,12 +7,13 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
 import com.example.BookingSystem.DataAccessObject;
+import com.example.BookingSystem.Entities.Customer;
 
 
-public class BookingDAO  implements DataAccessObject<Booking>{
+public class CustomerDAO implements DataAccessObject<Customer>{
 	
 	SessionFactory sessionFactory;
-	
+
 	public SessionFactory getSessionFactory() {
 		return sessionFactory;
 	}
@@ -22,27 +23,30 @@ public class BookingDAO  implements DataAccessObject<Booking>{
 	}
 
 	@Override
-	public Booking add(Booking newEntity) {
-		Session session= getSessionFactory().openSession();
+	public Customer add(Customer newEntity) {
+		Session session = getSessionFactory().openSession();
 		session.beginTransaction();
-		session.persist(newEntity); // INSERT the object in DB
+		session.persist(newEntity);
 		session.getTransaction().commit();
 		session.close();
 		return newEntity;
 	}
 
 	@Override
-	public List<Booking> find(int key) {
-		Session session= getSessionFactory().openSession();
+	public List<Customer> find(int key) {
+		Session session = getSessionFactory().openSession();
 		session.beginTransaction();
-		Booking bk = session.get(Booking.class, key); // Select
-		session.getTransaction().commit();
 		
+		// generic fetch for Object.
+		Customer e = (Customer) session.get(Customer.class, key);
+		session.getTransaction().commit();
 		session.close();
 		
-		List<Booking> list = new ArrayList<>();
-		list.add(bk);
-		return list;
+		
+		List<Customer> employee = new ArrayList<>();
+		employee.add(e);
+		return employee;
+		
 	}
 
 }

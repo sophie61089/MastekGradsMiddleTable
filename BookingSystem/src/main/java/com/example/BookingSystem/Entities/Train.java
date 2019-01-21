@@ -1,4 +1,4 @@
-package com.example.BookingSystem;
+package com.example.BookingSystem.Entities;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

@@ -1,4 +1,4 @@
-package com.example.BookingSystem;
+package com.example.BookingSystem.DAO;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,7 +6,10 @@ import java.util.List;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
-public class HotelDAO implements DataAccessObject<Hotel>{
+import com.example.BookingSystem.DataAccessObject;
+import com.example.BookingSystem.Entities.Account;
+
+public class AccountDAO implements DataAccessObject<Account>{
 	
 	SessionFactory sessionFactory;
 
@@ -19,25 +22,28 @@ public class HotelDAO implements DataAccessObject<Hotel>{
 	}
 
 	@Override
-	public Hotel add(Hotel newEntity) {
+	public Account add(Account newEntity) {
 		Session session = getSessionFactory().openSession();
 		session.beginTransaction();
-		session.persist(newEntity); //Insert the object into DB
+		session.persist(newEntity); //insert
 		session.getTransaction().commit();
 		session.close();
 		return newEntity;
 	}
 
 	@Override
-	public List<Hotel> find(int key) {
+	public List<Account> find(int key) {
 		Session session = getSessionFactory().openSession();
 		session.beginTransaction();
-		Hotel hotel = session.get(Hotel.class, key); //Select
+		Account acc = session.get(Account.class, key);
 		session.getTransaction().commit();
 		session.close();
-		List<Hotel> list = new ArrayList<>();
-		list.add(hotel);
+		
+		List<Account> list = new ArrayList<>();
+		list.add(acc);
 		return list;
 	}
+	
+	
 
 }
