@@ -29,7 +29,7 @@ public String toString() {
 }
 
 	@Override
-	public Flight add(Flight newEntity) {
+	public Flight add(Flight newEntity) { 
 		Session session = getSessionfactory().openSession();
 		session.beginTransaction();
 		session.persist(newEntity); //Insert the object into DB

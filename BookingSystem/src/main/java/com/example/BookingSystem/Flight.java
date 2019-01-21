@@ -54,7 +54,7 @@ public class Flight {
 	public double getFlightPrice() {
 		return flightPrice;
 	}
-	public void setFlightPrice(double flightPrice) {
+	public void setFlightPrice(double flightPrice) { 
 		this.flightPrice = flightPrice;
 	}
 	@Override
