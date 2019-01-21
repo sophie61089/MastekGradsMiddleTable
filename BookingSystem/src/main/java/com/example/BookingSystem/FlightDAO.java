@@ -35,7 +35,7 @@ public String toString() {
 		session.persist(newEntity); //Insert the object into DB
 		session.getTransaction().commit();
 		session.close();
-		return newEntity;
+		return newEntity; 
 	}
 
 	@Override
