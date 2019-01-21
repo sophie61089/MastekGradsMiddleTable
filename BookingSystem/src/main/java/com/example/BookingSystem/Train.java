@@ -5,17 +5,26 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.ws.rs.FormParam;
+import javax.xml.bind.annotation.XmlRootElement;
 
 @Entity
 @Table(name="GROUP_Train")
+@XmlRootElement
 public class Train {
 
 	int trainNo;
+	@FormParam("origin")
 	String origin;
+	@FormParam("destination")
 	String destination;
+	@FormParam("total_carriage_number")
 	int totalCarriageNo;
-	int driver;
+	@FormParam("driver")
+	String driver;
+	@FormParam("provider")
 	String provider;
+	@FormParam("price")
 	int price;
 	
 	@Override
@@ -50,7 +59,7 @@ public class Train {
 	public void setTotalCarriageNo(int totalCarriageNo) {
 		this.totalCarriageNo = totalCarriageNo;
 	}
-	public int getDriver() {
+	public String getDriver() {
 		return driver;
 	}
 	public int getPrice() {
@@ -59,7 +68,7 @@ public class Train {
 	public void setPrice(int price) {
 		this.price = price;
 	}
-	public void setDriver(int driver) {
+	public void setDriver(String driver) {
 		this.driver = driver;
 	}
 	public String getProvider() {
