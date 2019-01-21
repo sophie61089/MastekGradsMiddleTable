@@ -14,7 +14,7 @@ import org.springframework.stereotype.Component;
 @Component
 @Path("/hotels/")
 public class HotelAccessAPI {
-	
+	 
 	HotelJPARepository hotelRepository;
 	
 	public HotelJPARepository getHotelRepo() {
