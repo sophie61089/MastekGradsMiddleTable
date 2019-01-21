@@ -9,6 +9,8 @@ public class BookingSystemApplication {
 
 	public static void main(String[] args) {
 		ConfigurableApplicationContext ctx = SpringApplication.run(BookingSystemApplication.class, args);
+		
+		
 	}
 
 }
