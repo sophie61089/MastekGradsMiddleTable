@@ -14,7 +14,7 @@ public class Booking {
 	public Integer getBookingId() {
 		return bookingId;
 	}
-	public void setBookingId(Integer bookingId) {
+	public void setBookingId(Integer bookingId) {//123
 		this.bookingId = bookingId;
 	}
 	public String getTime() {
