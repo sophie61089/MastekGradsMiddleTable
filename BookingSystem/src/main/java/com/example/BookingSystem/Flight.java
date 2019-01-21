@@ -1,6 +1,9 @@
 package com.example.BookingSystem;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
@@ -15,6 +18,9 @@ public class Flight {
 	String flightDestination;
 	String airline;
 	double flightPrice;
+	
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	public int getFlightNo() {
 		return flightNo;
 	}
