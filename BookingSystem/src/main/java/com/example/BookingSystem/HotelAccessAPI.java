@@ -14,7 +14,7 @@ import org.springframework.stereotype.Component;
 @Component
 @Path("/hotels/")
 public class HotelAccessAPI {
-	
+	 
 	HotelJPARepository hotelRepository;
 	
 	public HotelJPARepository getHotelRepo() {
@@ -23,7 +23,7 @@ public class HotelAccessAPI {
 
 	@Autowired
 	public void setHotelRepo(HotelJPARepository hotelRepo) {
-		this.hotelRepository = hotelRepository;
+		this.hotelRepository = hotelRepo;
 	}
 	
 	@Path("/list")

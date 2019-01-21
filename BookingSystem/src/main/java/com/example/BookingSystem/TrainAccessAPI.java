@@ -8,6 +8,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -20,6 +21,7 @@ public class TrainAccessAPI {
 		return repository;
 	}
 
+	@Autowired
 	public void setRepository(TrainJPARepository repository) {
 		this.repository = repository;
 	}

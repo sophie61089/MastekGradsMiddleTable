@@ -9,6 +9,7 @@ public class BookingSystemApplication {
 
 	public static void main(String[] args) {
 		ConfigurableApplicationContext ctx = SpringApplication.run(BookingSystemApplication.class, args);
+<<<<<<< HEAD
 	TrainAccessAPI trainAPI = ctx.getBean(TrainAccessAPI.class);
 	
 //	Train train1 = new Train();
@@ -39,6 +40,9 @@ public class BookingSystemApplication {
 //	ctx.close();
 //	
 //	
+=======
+
+>>>>>>> branch 'master' of https://github.com/sophie61089/MastekGradsMiddleTable.git
 	}
 
 }
