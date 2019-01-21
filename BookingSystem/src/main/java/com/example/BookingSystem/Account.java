@@ -1,5 +1,10 @@
 package com.example.BookingSystem;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="GROUP_Account")
 public class Account {
 	
 	int accountId;
