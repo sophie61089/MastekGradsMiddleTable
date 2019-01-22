@@ -13,7 +13,7 @@
     <td>{{tr.trainNo}}</td>
     <td>{{tr.origin}}</td>
     <td>{{tr.destination}}</td>
-    <td>{{tr.total_carriage_number}}</td>
+    <td>{{tr.totalCarriageNo}}</td>
     <td>{{tr.driver}}</td>
     <td>{{tr.provider}}</td>
     <td>{{tr.price}}</td>
@@ -21,13 +21,13 @@
   </tr>
 </table>
 <form (submit) ="addNewTrain({
-  trainNo:0,origin:torigin.value,destination:tdestination.value,total_carriage_number:ttotal_carriage_number.value,
+  trainNo:0,origin:torigin.value,destination:tdestination.value,total_carriage_number:ttotalCarriageNo.value,
   driver:tdriver.value,provider:tprovider.value,price:tprice.value
 })">
 <tr>
   <td><input placeholder="origin" #torigin></td>
   <td><input placeholder="destination" #tdestination></td>
-  <td><input placeholder="total_carriage_number" #ttotal_carriage_number></td>
+  <td><input placeholder="total_carriage_number" #ttotalCarriageNo></td>
   <td><input placeholder="driver" #tdriver></td>
   <td><input placeholder="provider" #tprovider></td>
   <td><input placeholder="price" #tprice></td>
