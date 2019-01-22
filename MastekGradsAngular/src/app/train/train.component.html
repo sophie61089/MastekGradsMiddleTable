@@ -1,3 +1,36 @@
-<p>
-  train works!
-</p>
+<h1>Train Inforomation</h1>
+<table>
+  <tr>
+    <th>trainNo</th>
+    <th>origin</th>
+    <th>destination</th>
+    <th>total_carriage_number</th>
+    <th>driver</th>
+    <th>provider</th>
+    <th>price</th>
+  </tr>
+  <tr *ngFor="let tr of trains; let i= index">
+    <td>{{tr.trainNo}}</td>
+    <td>{{tr.origin}}</td>
+    <td>{{tr.destination}}</td>
+    <td>{{tr.total_carriage_number}}</td>
+    <td>{{tr.driver}}</td>
+    <td>{{tr.provider}}</td>
+    <td>{{tr.price}}</td>
+    <td><button (click) ="getTrains(tr.trainNo)">x</button></td>
+  </tr>
+</table>
+<form (submit) ="addNewTrain({
+  trainNo:0,origin:torigin.value,destination:tdestination.value,total_carriage_number:ttotal_carriage_number.value,
+  driver:tdriver.value,provider:tprovider.value,price:tprice.value
+})">
+<tr>
+  <td><input placeholder="origin" #torigin></td>
+  <td><input placeholder="destination" #tdestination></td>
+  <td><input placeholder="total_carriage_number" #ttotal_carriage_number></td>
+  <td><input placeholder="driver" #tdriver></td>
+  <td><input placeholder="provider" #tprovider></td>
+  <td><input placeholder="price" #tprice></td>
+  <td><input type="submit" value="Add"></td>
+</tr>
+</form>
