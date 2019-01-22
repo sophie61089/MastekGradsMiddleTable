@@ -1,3 +1,41 @@
-<p>
-  flight works! BY MIKE
-</p>
+<h1>Flight Booking Service</h1>
+
+<table>
+  <tr>
+    <th colspan="7">Available Flights</th>
+  </tr>
+  <tr>
+    <th>Flight Number</th>
+    <th>Departure Date</th>
+    <th>Arrival Date</th>
+    <th>Flight Origin</th>
+    <th>Flight Destination</th>
+    <th>Airline</th>
+    <th>Flight Price</th>
+  </tr>
+ <tr *ngFor="let fl of flight; let i=index">
+    <td>{{fl.flightNo}}</td>
+    <td>{{fl.departureDate}}</td>
+    <td>{{fl.arrivalDate}}</td>
+    <td>{{fl.flightOrigin}}</td>
+    <td>{{fl.flightDestination}}</td>
+    <td>{{fl.airline}}</td>
+    <td>{{fl.flightPrice}}</td>
+  </tr>
+</table>
+
+<form (submit)="addNewFlight({flightNo:fnum.value, departureDate:fdepdate.value,arrivalDate:fardate.value, flightOrigin:forigin.value, flightDestination:fdest.value,airline:fairline.value, flightPrice:fprice.value})">
+  <tr>
+    <td><input placeholder="Flight Number" #fnum></td>
+    <td><input placeholder="Departure Date" #fdepdate></td>
+    <td><input placeholder="Arrival Date" #fardate></td>
+    <td><input placeholder="Flight Origin" #forigin></td>
+    <td><input placeholder="Flight Destination" #fdest></td>
+    <td><input placeholder="Airline" #fairline></td>
+    <td><input placeholder="Flight Price" #fprice></td>
+    <td><input type="submit" value="Add New Flight"></td>
+  </tr>
+  </form>
+
+
+<p>By Mike</p>
