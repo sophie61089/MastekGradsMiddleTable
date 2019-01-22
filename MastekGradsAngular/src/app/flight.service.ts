@@ -11,7 +11,7 @@ export class FlightService {
   rootTrainingURL:string;
 
   constructor(private httpsvc: HttpClient) {
-    this.rootURL = "http://localhost:9900/flight";
+    this.rootURL = "http://localhost:9900/flights";
   }
 
   getFlights(): Observable<Flight[]> {
@@ -33,7 +33,7 @@ export class FlightService {
     + "&flightPrice=" + newFlight.flightPrice
 
     return this.httpsvc.post<Flight>(
-      this.rootURL + "/register", reqBody, httpOpts)
+      this.rootURL + "/book", reqBody, httpOpts)
   }
 }
 

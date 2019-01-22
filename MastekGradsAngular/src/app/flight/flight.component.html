@@ -24,9 +24,8 @@
   </tr>
 </table>
 
-<form (submit)="addNewFlight({flightNo:fnum.value, departureDate:fdepdate.value,arrivalDate:fardate.value, flightOrigin:forigin.value, flightDestination:fdest.value,airline:fairline.value, flightPrice:fprice.value})">
+<form (submit)="addNewFlight({departureDate:fdepdate.value,arrivalDate:fardate.value, flightOrigin:forigin.value, flightDestination:fdest.value,airline:fairline.value, flightPrice:fprice.value})">
   <tr>
-    <td class="no-border"><input placeholder="Flight Number" #fnum></td>
     <td class="no-border"><input placeholder="Departure Date" #fdepdate></td>
     <td class="no-border"><input placeholder="Arrival Date" #fardate></td>
     <td class="no-border"><input placeholder="Flight Origin" #forigin></td>
