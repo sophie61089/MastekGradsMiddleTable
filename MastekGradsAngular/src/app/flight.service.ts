@@ -28,7 +28,7 @@ export class FlightService {
     }
     var reqBody = "flightNo=" + newFlight.flightNo + "&departureDate=" + newFlight.departureDate 
     + "&arrivalDate=" + newFlight.arrivalDate + "&flightOrigin=" + newFlight.flightOrigin
-    + "&flightDestination=" + newFlight.flightDestination + "&departureDate=" + newFlight.airline
+    + "&flightDestination=" + newFlight.flightDestination + "&airline=" + newFlight.airline
     + "&flightPrice=" + newFlight.flightPrice
 
     return this.httpsvc.post<Flight>(
