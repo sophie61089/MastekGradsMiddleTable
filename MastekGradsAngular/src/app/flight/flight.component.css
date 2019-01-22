@@ -1,0 +1,16 @@
+table, th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 4px;
+}
+
+th{
+    font-weight: bold;
+    text-decoration: underline;
+    background: rgb(238, 238, 238);
+}
+
+.no-border{
+    border: 0px;
+    padding: 0px;
+}
