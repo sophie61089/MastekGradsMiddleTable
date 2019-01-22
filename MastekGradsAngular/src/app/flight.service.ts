@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Flight } from './flight';
+import { HttpClient } from '../../node_modules/@types/selenium-webdriver/http';
+import { Observable } from '../../node_modules/rxjs';
 
 @Injectable({
   providedIn: 'root'
