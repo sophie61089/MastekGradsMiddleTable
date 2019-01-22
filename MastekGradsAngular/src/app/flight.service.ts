@@ -8,7 +8,6 @@ import { HttpClient, HttpHeaders } from '../../node_modules/@angular/common/http
 })
 export class FlightService {
   rootURL: string;
-  rootTrainingURL:string;
 
   constructor(private httpsvc: HttpClient) {
     this.rootURL = "http://localhost:9900/flights";
