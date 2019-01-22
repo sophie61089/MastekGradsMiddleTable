@@ -1,3 +1,18 @@
-<p>
-  account works!
-</p>
+<h1>Accounts</h1>
+
+<table>
+  <tr>
+    <th>Account Id</th>
+    <th>Account Type</th>
+  </tr>
+  <tr *ngFor="let a of accounts; let i=index">
+    <td>{{a.accountId}}</td>
+    <td>{{a.accountType}}</td>
+  </tr>
+</table>
+<form (submit)="addNewAccount({accountType:atype.value})">
+  <tr>
+    <td><input placeholder="Account Type" #atype></td>
+    <td><input type="submit" value="Add"></td>
+  </tr>
+</form>
