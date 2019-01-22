@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-<<<<<<< HEAD
 import { AccountComponent } from './account/account.component';
 import { BookingComponent } from './booking/booking.component';
 import { CustomerComponent } from './customer/customer.component';
@@ -15,12 +14,6 @@ const routes: Routes = [
   {path:'flight', component:FlightComponent},
   {path:'hotel', component:HotelComponent},
   {path:'train', component:TrainComponent}
-=======
-import { FlightComponent } from './flight/flight.component';
-
-const routes: Routes = [
-  {path:'flight',component:FlightComponent}
->>>>>>> 21c1677d0f62be68aedc99cb0c2fda22e3313f21
 ];
 
 @NgModule({
