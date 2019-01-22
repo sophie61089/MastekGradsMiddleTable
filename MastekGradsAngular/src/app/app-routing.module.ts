@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { FlightComponent } from './flight/flight.component';
 
 const routes: Routes = [
-  {path:'flight',component:FlightComponent}
+  {path:'flights',component:FlightComponent}
 ];
 
 @NgModule({
