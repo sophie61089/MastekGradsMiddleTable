@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 export class HotelService {
 
   rootURL: string;
-
+  
   constructor(private httpRequests: HttpClient) {
     this.rootURL = "http://localhost:8080/hotel"
    }
@@ -18,13 +18,16 @@ export class HotelService {
      return this.httpRequests.get<HotelReservation[]>(this.rootURL+"/list")
    }
 
-    addreservationToTable(occupants:number,roomsize:number,price:number,location:string,duration:number){
+   addReservationToTable(occupants:number,roomSize:number,location:string,duration:number):Observable<HotelReservation[]>{
       const httpOpts = {
         headers: new HttpHeaders(
           {'Content-Type':
           'application/x-www-form-urlencoded;charset=UTF-8'})
-
-          //var request = 
+        }
+          //var request = "occupants=" + occupants + "&roomSize=" + roomsize + "&location=" + location + "&durationInDays=" + duration;
+          var request = "occupants=" + occupants + "&roomSize=" + roomSize + "&location=" + location + "&durationInDays=" + duration;
+          
+          //return this.httpRequests.post<any>(this.rootURL+"/register/", request, httpOpts)
+          return this.httpRequests.post<any>(this.rootURL+"/register",request,httpOpts )
       }
     }
-}
