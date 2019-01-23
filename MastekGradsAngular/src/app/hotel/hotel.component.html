@@ -1,3 +1,63 @@
-<p>
-  hotel works!
-</p>
+<form>
+
+  <div class="form-group">
+
+    <label>Occupants</label>
+    <input />
+  </div>
+
+  <div class="form-group">
+
+    <label>Room Size</label>
+    <!-- dropdown menu -->
+  </div>
+
+  <div class="form-group">
+
+    <label>Price</label>
+    <!-- maybe make it generated -->
+  </div>
+
+  <div class="form-group">
+
+    <label>Location</label>
+    <!-- input field -->
+  </div>
+
+  <div class="form-group">
+
+    <label>Duration</label>
+    <!-- drop down list -->
+  </div>
+
+  <div class="form-group">
+
+    <label>Late Checkout</label>
+    <!-- radio button -->
+  </div>
+
+  <div class="form-group">
+    <table>
+      <tr>
+        <td>Booking ID</td>
+        <td>occupants</td>
+        <td>roomsize</td>
+        <td>price</td>
+        <td>location</td>
+        <td>duration</td>
+        <td>latecheckout</td>
+      </tr>
+
+      <tr *ngFor="let x of fillRequestTable; let i = index">
+          <td>{{i}}</td>
+          <td> {{x.occupants}}</td>
+          <td> {{x.roomSize}}</td>
+          <td> {{x.price}}</td>
+          <td> {{x.location}}</td>
+          <td> {{x.durationInDays}}</td>
+          <td> {{x.lateCheckout}}</td>
+          
+        </tr>
+    </table>
+  </div>
+</form>
