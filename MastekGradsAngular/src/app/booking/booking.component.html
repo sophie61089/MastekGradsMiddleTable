@@ -1,3 +1,22 @@
-<p>
-  booking works!
-</p>
+<h1> Booking Details</h1>
+
+<table>
+  <tr>
+      <th>Booking Id</th>
+      <th>Company</th>
+  </tr>
+  <tr *ngFor="let pr of bookings; let i = index">
+    <td>{{pr.bookingId}}</td>
+    <td>{{pr.company}}</td>
+    <td><button (click)="deleteBooking(pr.bookingId)">X</button></td>
+  </tr>
+</table>
+
+  <form (submit)=
+  "addNewBooking({bookingId:0,company:pcompany.value})">
+<tr>
+
+<td><input placeholder="company": #pcompany></td>
+<td><input type="submit" value="Add"></td>
+</tr>
+</form>
