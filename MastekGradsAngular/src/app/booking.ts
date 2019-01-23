@@ -1,4 +1,5 @@
 export interface Booking {
     bookingId:number;
-    company:string;
+    date:string;
+    time:string;
 }

@@ -1,3 +1,22 @@
-<p>
-  customer works!
-</p>
+<h1>Booking Service</h1>
+
+<table>
+  <tr>
+    <th>Customer ID</th>
+    <th>Name</th>
+  </tr>
+ <tr *ngFor="let cst of booking; let i=index">
+    <td>{{cst.customerId}}</td>
+    <td>{{cst.customerName}}</td>
+  </tr>
+</table>
+
+<form (submit)="addNewBooking({customerId:cstId.value,customerName:cstName.value})">
+  <tr>
+    <td ><input placeholder="Customer ID" #cstId></td>
+    <td ><input placeholder="Name" #cstName></td>
+    <td ><input type="submit" value="Add New Customer"></td>
+  </tr>
+  </form>
+
+<br>

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { BookingsService } from './bookings.service';
-import { Booking } from './booking';
+import { BookingService } from '../booking.service';
+import { Booking } from '../booking';
 
 @Component({
   selector: 'app-booking',
@@ -10,6 +10,28 @@ import { Booking } from './booking';
 export class BookingComponent implements OnInit {
   bookings:Booking[]
 
+  booking:Booking[]
+
+  constructor(private bookingService:BookingService) {
+    this.booking=[]
+   }
+
+   addNewBooking(newBooking:Booking){
+      this.bookingService.addNewBooking(newBooking).subscribe(
+        res=>{
+          this.bookingService.getBookings().subscribe(
+            res=>{this.booking=res}
+          )
+        }
+      )
+   }
+
+  ngOnInit() {
+    this.bookingService.getBookings().subscribe(
+      res=>{this.booking=res}
+    )
+  }
+}
   constructor(private bookService:BookingsService) { 
     this.bookings=[]
   }
