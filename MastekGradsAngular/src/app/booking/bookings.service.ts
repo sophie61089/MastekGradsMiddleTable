@@ -11,7 +11,7 @@ export class BookingsService {
   rootURL:string
 
   constructor(private httpsvc:HttpClient) {  
-    this.rootURL="http://localhost:4200/Bookings"
+    this.rootURL="http://localhost:4200/Booking"
   }
 
   getBookings():Observable<Booking[]>{
