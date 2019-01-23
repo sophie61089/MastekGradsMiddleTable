@@ -18,14 +18,14 @@ export class HotelService {
      return this.httpRequests.get<HotelReservation[]>(this.rootURL+"/list")
    }
 
-   addReservationToTable(occupants:number,roomSize:number,location:string,duration:number):Observable<HotelReservation[]>{
+   addReservationToTable(occupants:number,location:string,duration:number):Observable<HotelReservation[]>{
       const httpOpts = {
         headers: new HttpHeaders(
           {'Content-Type':
           'application/x-www-form-urlencoded;charset=UTF-8'})
         }
           //var request = "occupants=" + occupants + "&roomSize=" + roomsize + "&location=" + location + "&durationInDays=" + duration;
-          var request = "occupants=" + occupants + "&roomSize=" + roomSize + "&location=" + location + "&durationInDays=" + duration;
+          var request = "occupants=" + occupants + "&location=" + location + "&duration=" + duration;
           
           //return this.httpRequests.post<any>(this.rootURL+"/register/", request, httpOpts)
           return this.httpRequests.post<any>(this.rootURL+"/register",request,httpOpts )

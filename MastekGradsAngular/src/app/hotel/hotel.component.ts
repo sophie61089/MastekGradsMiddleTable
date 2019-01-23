@@ -30,12 +30,11 @@ export class HotelComponent implements OnInit {
 
   fillRequestTable = [{}]
 
-  makeHotelRequest(occupants: number, roomsize: number, location: string, duration: number) {
+  makeHotelRequest(occupants: number, location: string, duration: number) {
     console.log(occupants)
-    console.log("roomsize" + roomsize)
     console.log(location)
     console.log(duration)
-    this.httpReqs.addReservationToTable(occupants,roomsize,location,duration).subscribe( res => {
+    this.httpReqs.addReservationToTable(occupants,location,duration).subscribe( res => {
       this.httpReqs.getRequestList().subscribe(res => {
         this.fillRequestTable = res;
       })
