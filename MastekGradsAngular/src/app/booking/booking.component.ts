@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Booking } from '../booking';
 import { BookingService } from '../booking.service';
+import { Booking } from '../booking';
 
 @Component({
   selector: 'app-booking',
@@ -8,6 +8,7 @@ import { BookingService } from '../booking.service';
   styleUrls: ['./booking.component.css']
 })
 export class BookingComponent implements OnInit {
+  bookings:Booking[]
 
   booking:Booking[]
 
@@ -29,5 +30,37 @@ export class BookingComponent implements OnInit {
     this.bookingService.getBookings().subscribe(
       res=>{this.booking=res}
     )
+  }
+}
+  constructor(private bookService:BookingsService) { 
+    this.bookings=[]
+  }
+
+  addNewBooking(newBooking:Booking){
+    this.bookService.addNewBooking(newBooking).subscribe(
+      res=>{
+        this.bookService.getBookings().subscribe(
+          res =>{this.bookings =res}
+        )
+      }
+    )
+  }
+
+  deleteBooking(bookingId:number){
+    this.bookService.deleteBooking(bookingId).subscribe(
+      res=>{
+        this.bookService.getBookings().subscribe(
+          res =>{ this.bookings =res}
+        )
+      }
+    )
+  }
+
+
+  ngOnInit() {
+    
+  this.bookService.getBookings().subscribe(
+    res =>(this.bookings= res)
+  )
   }
 }
