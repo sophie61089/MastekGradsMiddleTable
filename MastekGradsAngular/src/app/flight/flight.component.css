@@ -1,7 +1,9 @@
 table, th, td{
-    border: 1px solid black;
+    border: 1px solid rgb(224, 224, 224);
     border-collapse: collapse;
     padding: 4px;
+    padding-left: 20px;
+    padding-right: 20px;
     text-align: center
 }
 
@@ -9,6 +11,9 @@ th{
     font-weight: bold;
     text-decoration: underline;
     background: rgb(209, 238, 255);
+    border: 2px ridge rgb(0, 12, 241);
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 .no-border{
