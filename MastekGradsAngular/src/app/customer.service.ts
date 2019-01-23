@@ -30,7 +30,7 @@ export class CustomerService {
     
 
     return this.httpsvc.post<Customer>(
-      this.rootURL + "/book", reqBody, httpOpts)
+      this.rootURL + "/register", reqBody, httpOpts)
   }
 }
 

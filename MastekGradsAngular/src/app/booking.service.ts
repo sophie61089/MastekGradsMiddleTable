@@ -26,11 +26,11 @@ export class BookingService {
             'application/x-www-form-urlencoded;charset=UTF-8'
         })
     }
-    var reqBody = "bkId=" + addNewBooking.bookingId + "&bkTime=" + addNewBooking.time
-    + "&bkDate=" + addNewBooking.date
+    var reqBody = "time=" + addNewBooking.time
+    + "&date=" + addNewBooking.date
 
     return this.httpsvc.post<Booking>(
-      this.rootURL + "/book", reqBody, httpOpts)
+      this.rootURL + "/register", reqBody, httpOpts)
   }
 }
 

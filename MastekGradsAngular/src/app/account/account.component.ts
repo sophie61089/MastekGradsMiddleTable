@@ -15,8 +15,8 @@ export class AccountComponent implements OnInit {
     this.accounts=[]
    }
 
-
   addNewAccount(newAccount:Account){
+    console.log(newAccount)
     this.accountService.addAccount(newAccount).subscribe(
       res =>{
         this.accountService.listAccounts().subscribe(

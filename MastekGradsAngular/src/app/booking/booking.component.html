@@ -13,9 +13,8 @@
   </tr>
 </table>
 
-<form (submit)="addNewBooking({bookingId:bkId.value,date:bkDate.value,time:bkTime.value})">
+<form (submit)="addNewBooking({date:bkDate.value,time:bkTime.value})">
   <tr>
-    <td ><input placeholder="Booking ID" #bkId></td>
     <td ><input placeholder="Date" #bkDate></td>
     <td ><input placeholder="Time" #bkTime></td>
     <td ><input type="submit" value="Add New Booking"></td>
