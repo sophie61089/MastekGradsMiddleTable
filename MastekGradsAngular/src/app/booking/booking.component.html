@@ -1,3 +1,25 @@
-<p>
-  booking works!
-</p>
+<h1>Booking Service</h1>
+
+<table>
+  <tr>
+    <th>Booking ID</th>
+    <th>Time</th>
+    <th>Date</th>
+  </tr>
+ <tr *ngFor="let bk of booking; let i=index">
+    <td>{{bk.bookingId}}</td>
+    <td>{{bk.date}}</td>
+    <td>{{bk.time}}</td>
+  </tr>
+</table>
+
+<form (submit)="addNewBooking({bookingId:bkId.value,date:bkDate.value,time:bkTime.value})">
+  <tr>
+    <td ><input placeholder="Booking ID" #bkId></td>
+    <td ><input placeholder="Date" #bkDate></td>
+    <td ><input placeholder="Time" #bkTime></td>
+    <td ><input type="submit" value="Add New Booking"></td>
+  </tr>
+  </form>
+
+<br>

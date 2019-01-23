@@ -29,5 +29,4 @@ flight:Flight[]
       res=> {this.flight=res}
     )
   }
-
 }
