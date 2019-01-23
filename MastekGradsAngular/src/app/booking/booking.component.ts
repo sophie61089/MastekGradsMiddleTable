@@ -8,9 +8,8 @@ import { Booking } from '../booking';
   styleUrls: ['./booking.component.css']
 })
 export class BookingComponent implements OnInit {
-  bookings:Booking[]
-
   booking:Booking[]
+
 
   constructor(private bookingService:BookingService) {
     this.booking=[]
