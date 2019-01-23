@@ -10,7 +10,7 @@ export class CustomerService {
   rootURL: string;
 
   constructor(private httpsvc: HttpClient) {
-    this.rootURL = "http://localhost:9900/flights";
+    this.rootURL = "http://localhost:9900/customer";
   }
 
   getCustomers(): Observable<Customer[]> {
